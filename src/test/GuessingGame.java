@@ -11,20 +11,41 @@ public class GuessingGame {
         String word = "helloooo";
         String letter = "";
         String userLetter = "";
+        String userword = "";
+        int i = 0;
         // Make a guessing game using the Dictionary Library. See Dictionary Tester for inspiration.
 
         // You can be inventive!
 
         do {
             word = Dictionary.getRandomWord();
+
+        }
+        while (word.length() > 6); {
             System.out.println(word);
+        }
 
-        } while (word.length() > 6);
 
-        System.out.println("select four letters");
-        userLetter = scan.next();
+        while (i < 6) {
+            System.out.println("select a letter");
+            userLetter = scan.next();
 
-        while userLetter = letter {
-            System.out.println(userLetter + " is in word");
+            if (userLetter.equals(letter)) {
+                System.out.println(userLetter + " is in word");
+
+            }i++;
+        }
+
+
+        System.out.println("Guess a word");
+            userword = scan.next();
+
+        if (userword.equals(word)) {
+            System.out.println("you are right");
+            }
+        if (!(userword.equals(word))) {
+            System.out.println("you are wrong, word is not " + userword);
+            }
+
         }
     }
