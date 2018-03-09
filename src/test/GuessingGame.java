@@ -21,21 +21,26 @@ public class GuessingGame {
             word = Dictionary.getRandomWord();
 
         }
-        while (word.length() > 6); {
-            System.out.println(word);
-        }
+        while (word.length() > 6);
 
 
-        while (i < 6) {
+
+        String[] letters= word.split("");
+
+
+        while (i < 3) {
             System.out.println("select a letter");
             userLetter = scan.next();
-
-            if (userLetter.equals(letter)) {
-                System.out.println(userLetter + " is in word");
-
-            }i++;
+            for (int x=0; x<letters.length-1;x++) {
+                  if (userLetter.equals(letters[x])) {
+                     System.out.println(userLetter + " is in word");
+                  if (!userLetter.equals(letters[x])) {
+                      System.out.println(userLetter + " is not in word");
+                  }
+                  }
+              }
+              i++;
         }
-
 
         System.out.println("Guess a word");
             userword = scan.next();
@@ -44,7 +49,7 @@ public class GuessingGame {
             System.out.println("you are right");
             }
         if (!(userword.equals(word))) {
-            System.out.println("you are wrong, word is not " + userword);
+            System.out.println("you are wrong, word is not " + userword + ", word is " + word);
             }
 
         }
