@@ -13,7 +13,7 @@ public class GuessingGame {
         String userLetter = "";
         String userword = "";
         int i = 0;
-        // Make a guessing game using the Dictionary Library. See Dictionary Tester for inspiration.
+        // Make a guessing game using the Dictionary Library. See Dictionary Tester for inspiration..
 
         // You can be inventive!
 
