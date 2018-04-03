@@ -1,7 +1,7 @@
 package test;
 
 import app.Dictionary;
-
+                              // too much whitespace
 import java.util.Scanner;
 
 public class GuessingGame {
@@ -21,7 +21,7 @@ public class GuessingGame {
             word = Dictionary.getRandomWord();
 
         }
-        while (word.length() > 6);
+        while (word.length() > 6);      // This gets a word less than 6 letters. Is that what you want?
 
 
 
@@ -31,7 +31,7 @@ public class GuessingGame {
         while (i < 3) {
             System.out.println("select a letter");
             userLetter = scan.next();
-            for (int x=0; x<letters.length-1;x++) {
+            for (int x=0; x<letters.length-1;x++) {            // interesting use of for loop! You can also use contains()
                   if (userLetter.equals(letters[x])) {
                      System.out.println(userLetter + " is in word");
                   if (!userLetter.equals(letters[x])) {
@@ -43,7 +43,7 @@ public class GuessingGame {
         }
 
         System.out.println("Guess a word");
-            userword = scan.next();
+            userword = scan.next();                      // indenting
 
         if (userword.equals(word)) {
             System.out.println("you are right");
