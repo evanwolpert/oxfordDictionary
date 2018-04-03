@@ -19,7 +19,7 @@ public class PasswordMaker {
             combined = word + Otherword;
 
 
-        } while (combined.length() > 8);
+        } while (combined.length() > 8);    // This gets a combined word that has fewer than 8 chars. Can you think how to fix it?
 
         // 2. Replace the vowels with numbers following these rules:
         //    a becomes 4
